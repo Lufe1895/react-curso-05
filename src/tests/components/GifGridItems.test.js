@@ -13,17 +13,17 @@ describe('Pruebas en <GifGridItem/>', () => {
     test('debe tener un párrafo con el title', () => {
         const p = wrapper.find('p');
         expect(p.text().trim()).toBe(title);
-    })
+    });
 
     test('debe tener la imagen igual al url', () => {
         const img = wrapper.find('img');
         expect(img.props().src).toBe(url);
         expect(img.props().alt).toBe(title);
-    })
+    });
     
     test('debe tener la animación', () => {
         const div = wrapper.find('div');
         const className = div.props().className;
         expect(className.includes('animate__fadeIn')).toBe(true);
-    })
-})
+    });
+});
